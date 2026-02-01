@@ -1,0 +1,17 @@
+# requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+torch==2.7.1+cu118
+torchvision==0.22.1+cu118
+torchaudio==2.7.1+cu118
+pyyaml>=6.0.0         # 读取配置文件
+gensim>=4.3.0         # 训练word2vec词向量
+pandas>=2.0.0         # 处理表格数据
+numpy==1.24.0         # 数值计算
+jieba>=0.42.1         # 中文分词
+scikit-learn>=1.2.0   # 划分数据集、评估模型
+tqdm>=4.65.0          # 显示进度条
+chardet>=5.1.0        # 解决中文编码问题
+matplotlib            # 可视化训练过程
+adjustText            # 可视化时调整文本标签位置
+nltk>=3.8.1           # 自然语言处理工具包

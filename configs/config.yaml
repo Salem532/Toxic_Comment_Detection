@@ -1,0 +1,34 @@
+# 项目名称
+project_name: "toxic_comment_detection"
+
+# 数据相关配置
+data:
+  train_path: "data/raw/train.csv"          # 训练集
+  test_path: "data/raw/test.csv"            # 测试集文本
+  test_labels_path: "data/raw/test_labels.csv" # 测试集标签
+  processed_dir: "data/processed/"
+  max_len: 200
+  min_freq: 2
+  test_size: 0.2
+
+# 模型结构参数
+model:
+  embed_dim: 100                      # Word2Vec 词向量维度
+  hidden_dim: 128                     # LSTM 隐藏层维度
+  num_layers: 2                       # LSTM 堆叠层数
+  bidirectional: true                 # 是否使用双向 LSTM
+  dropout: 0.5                        # Dropout 概率
+  num_classes: 6                      # 输出层维度（六分类）
+
+# 训练超参数
+train:
+  batch_size: 64                      # 批次大小
+  epochs: 10                          # 训练轮数
+  lr: 0.001                           # 学习率
+  device: "cuda"                      # 使用设备: "cuda" 或 "cpu"
+  model_save_dir: "saved/models/"          # 存 .pth 和 tokenizer.pkl
+  log_save_dir: "saved/logs/"              # 存 train.log
+  result_save_dir: "saved/results/"        # 存图片、预测结果 csv
+  log_interval: 10                    # 打印日志的间隔 
+
+
